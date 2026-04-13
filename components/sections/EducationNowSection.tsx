@@ -4,25 +4,25 @@ import Image from 'next/image';
 export default function EducationNowSection() {
   const trendingItems = [
     {
-      image: "/assets/Frame 1 tn.png",
+      image: "/assets/education1.jpg",
       title: "Digital Learning Revolution",
       description: "How AI and machine learning are transforming traditional classroom experiences, creating personalized learning paths for students worldwide.",
       category: "Technology"
     },
     {
-      image: "/assets/Frame 2 tn.png",
+      image: "/assets/education2.jpg",
       title: "Student Mental Health Focus",
       description: "Educational institutions prioritize student wellbeing with new mental health programs and support systems integrated into curriculum.",
       category: "Wellness"
     },
     {
-      image: "/assets/Frame 3 tn.png",
+      image: "/assets/education3.jpg",
       title: "Global Education Rankings 2024",
       description: "Latest comprehensive analysis of top-performing educational systems reveals surprising shifts in global leadership positions.",
       category: "Research"
     },
     {
-      image: "/assets/Frame 1 tn.png",
+      image: "/assets/education4.jpg",
       title: "Career-Ready Graduates",
       description: "New partnerships between universities and industry ensure graduates have practical skills for immediate employment success.",
       category: "Careers"
@@ -57,10 +57,10 @@ export default function EducationNowSection() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
 
               {/* Content */}
